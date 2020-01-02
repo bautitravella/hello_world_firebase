@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(new MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -91,7 +93,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
     );
   }
-  void buttonPressed(){}
+  void buttonPressed(){
+    Firestore.instance.collection('books').document()
+        .setData({ 'title': 'title', 'author': 'author' });
+  }
 
   void fabPressed() {}
 
