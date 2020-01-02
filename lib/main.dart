@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   void buttonPressed(){
     Firestore.instance.collection('books').document()
-        .setData({ 'title': 'title', 'author': 'author' });
+        .setData({ 'title': 'title', 'author': 'AgustiniOS' });
   }
 
   void fabPressed() {}
